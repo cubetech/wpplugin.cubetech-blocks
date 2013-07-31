@@ -22,7 +22,7 @@ function cubetech_blocks_create_post_type() {
 			'show_ui' => true,
 			'menu_position' => '20',
 			'menu_icon' => null,
-			'hierarchical' => false,
+			'hierarchical' => true,
 			'supports' => array('title', 'editor', 'thumbnail')
 		)
 	);

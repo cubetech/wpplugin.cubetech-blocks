@@ -3,7 +3,7 @@ function cubetech_blocks_shortcode($atts)
 {
 	extract(shortcode_atts(array(
 		'group'			=> false,
-		'orderby' 		=> false,
+		'orderby' 		=> 'menu_order',
 		'order'			=> 'asc',
 		'numberposts'	=> 999,
 		'offset'		=> 0,
