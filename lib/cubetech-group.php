@@ -19,11 +19,15 @@ function cubetech_blocks_create_taxonomy() {
 		'show_ui'             => true,
 		'show_admin_column'   => true,
 		'query_var'           => true,
-		'rewrite'             => array( 'slug' => 'cubetech_blocks' )
+		'rewrite'             => array( 'slug' => 'cubetech_blocks' ),
+		'sortable'			  => true,
+		'sort'				  => true,
 	);
 
 	register_taxonomy( 'cubetech_blocks_group', array( 'cubetech_blocks' ), $args );
 	flush_rewrite_rules();
 }
+
 add_action('init', 'cubetech_blocks_create_taxonomy');
+
 ?>

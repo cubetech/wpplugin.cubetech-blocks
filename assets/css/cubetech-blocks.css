@@ -5,10 +5,26 @@
 .cubetech-blocks-link > a  { display: block; background-color: #dfe64b; padding: 11px 40px 9px; font-weight: normal; font-family:"Avenir Next LT W01 Bold"; font-size: 15px; text-transform: uppercase; color: white;  box-shadow: 0 0 5px rgba(223,230,75,0.9); -webkit-box-shadow: 0 0 5px rgba(223,230,75,0.9); -moz-box-shadow: 0 0 5px rgba(223,230,75,0.9); }
 .cubetech-blocks-link > a:hover { color: white; }
 
-.cubetech-blocks-content { width: 40%; box-sizing: border-box; padding: 2% 3%; font-family: Arial, sans-serif; font-size: 13px; color: #2e3641;  }
+.cubetech-blocks-content { width: 40%; -moz-box-sizing: border-box; box-sizing: border-box; padding: 1.9% 2.5%; font-family: Arial, sans-serif; font-size: 13px; color: #2e3641;  }
 .cubetech-blocks-content a { color: #c4001d; font-family:"AvenirNextLTW01-Regular"; }
 .cubetech-blocks-content a:hover { color: #c4001d; text-decoration: underline; }
 .cubetech-blocks-content h2 { font-size: 15px; line-height: 20px; text-transform: uppercase; color: #2e3641; margin: 0; }
 .cubetech-blocks-content h3 { font-size: 13px; line-height: 18px; font-family:"AvenirNextLTW01-Regular"; color: #a6a6a6; margin: 0; }
 
-.cubetech-blocks-content-container { margin-top: 10px; }
+.cubetech-blocks-content-container { margin-top: 7px; line-height: 19px; }
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+	.cubetech-blocks-content { padding: 1% 1.5%; }
+	.cubetech-blocks-content-container { margin-top: 0px; line-height: 16px; font-size: 11px; }
+	.cubetech-blocks-content h2 { font-size: 13px; }
+
+}
+
+@media (max-width: 767px) {
+
+	.cubetech-blocks > div { width: 100%;}
+	.cubetech-blocks-image { position: relative; }
+	.cubetech-blocks-link { position: absolute; bottom: 10%; right: 5%; }
+
+}
