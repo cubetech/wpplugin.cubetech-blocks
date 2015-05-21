@@ -1,15 +1,13 @@
-.cubetech-blocks { position: relative; background-color: white; width: 100%; display: block; height: auto; border-top: 5px solid #dfe64b; overflow: auto; margin-bottom: 26px; box-shadow: 0 0 3px rgba(35,35,35,0.19); -webkit-box-shadow: 0 0 3px rgba(35,35,35,0.19); -moz-box-shadow: 0 0 3px rgba(35,35,35,0.19); }
-.cubetech-blocks > div { float: left; display: inline-block; min-height: 50px; }
-.cubetech-blocks-image { width: 60%; }
-.cubetech-blocks-link { position: absolute; bottom: 8%; right: 43%; }
-.cubetech-blocks-link > a  { display: block; background-color: #dfe64b; padding: 11px 40px 9px; font-weight: normal; font-family:"Avenir Next LT W01 Bold"; font-size: 15px; text-transform: uppercase; color: white;  box-shadow: 0 0 5px rgba(223,230,75,0.9); -webkit-box-shadow: 0 0 5px rgba(223,230,75,0.9); -moz-box-shadow: 0 0 5px rgba(223,230,75,0.9); }
-.cubetech-blocks-link > a:hover { color: white; }
+.cubetech-blocks { position: relative; background-color: white; width: 100%; display: block; height: auto; border-top: 5px solid #dfe64b; overflow: auto; margin-bottom: 26px; box-shadow: 0 1px 3px rgba(0,0,0,.13); -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.13); -moz-box-shadow: 0 1px 3px rgba(0,0,0,.13); }
+.cubetech-blocks > div { float: left; display: inline-block; min-height: 100px; }
+.cubetech-blocks-image { width: 60%; position: relative; }
+.cubetech-blocks-image img { width: 100%; height: auto; }
+.cubetech-blocks-link { position: absolute; bottom: 20px; right: 20px; }
+.cubetech-blocks-link > a  { display: block; background-color: #dfe64b; font-weight: normal; font-family:"Roboto"; font-size: 15px; font-weight: 700; text-align: center; text-transform: uppercase; color: #2e3641; width: 160px; line-height: 52px;  }
+.cubetech-blocks-link > a:hover { color: #2e3641; background-color: #c5c414; text-decoration: none; }
 
-.cubetech-blocks-content { width: 40%; -moz-box-sizing: border-box; box-sizing: border-box; padding: 1.9% 2.5%; font-family: Arial, sans-serif; font-size: 13px; color: #2e3641;  }
-.cubetech-blocks-content a { color: #c4001d; font-family:"AvenirNextLTW01-Regular"; }
-.cubetech-blocks-content a:hover { color: #c4001d; text-decoration: underline; }
-.cubetech-blocks-content h2 { font-size: 15px; line-height: 20px; text-transform: uppercase; color: #2e3641; margin: 0; }
-.cubetech-blocks-content h3 { font-size: 13px; line-height: 18px; font-family:"AvenirNextLTW01-Regular"; color: #a6a6a6; margin: 0; }
+.cubetech-blocks-content { width: 40%; -moz-box-sizing: border-box; box-sizing: border-box; padding: 25px; font-family: Arial, sans-serif; font-size: 13px; color: #2e3641;  }
+.cubetech-blocks-content h2 { margin-top: 0; }
 
 .cubetech-blocks-content-container { margin-top: 7px; line-height: 19px; }
 

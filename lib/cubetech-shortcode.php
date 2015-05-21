@@ -48,9 +48,9 @@ function cubetech_blocks_shortcode($atts)
 		$link = '';
 		
 		if(isset($post_meta_data['cubetech_blocks_externallink'][0]) && $post_meta_data['cubetech_blocks_externallink'][0] != '')
-			$link = '<span class="cubetech-blocks-link"><a href="' . $post_meta_data['cubetech_blocks_externallink'][0] . '" target="_blank">&raquo; MEHR</a></span>';
+			$link = '<span class="cubetech-blocks-link"><a href="' . $post_meta_data['cubetech_blocks_externallink'][0] . '" target="_blank">MEHR</a></span>';
 		elseif ( $post_meta_data['cubetech_blocks_links'][0] != '' && $post_meta_data['cubetech_blocks_links'][0] != 'nope' && $post_meta_data['cubetech_blocks_links'][0] > 0 )
-			$link = '<span class="cubetech-blocks-link"><a href="' . get_permalink( $post_meta_data['cubetech_blocks_links'][0] ) . '">&raquo; MEHR</a></span>';
+			$link = '<span class="cubetech-blocks-link"><a href="' . get_permalink( $post_meta_data['cubetech_blocks_links'][0] ) . '">MEHR</a></span>';
 		
 		$return .= '
 		<div class="cubetech-blocks">
