@@ -16,17 +16,16 @@ function cubetech_blocks_create_post_type() {
 			),
 			'capability_type' => 'post',
 			'taxonomies' => array('cubetech_blocks_group'),
-			'public' => true,
+			'public' => false,
 			'has_archive' => false,
 			'rewrite' => array('slug' => 'blocks', 'with_front' => false),
 			'show_ui' => true,
 			'menu_position' => '20',
 			'menu_icon' => null,
-			'hierarchical' => false,
-			'supports' => array('title', 'editor', 'thumbnail')
+			'hierarchical' => true,
+			'supports' => array('title', 'editor', 'thumbnail', 'page-attributes')
 		)
 	);
-	flush_rewrite_rules();
 }
 add_action('init', 'cubetech_blocks_create_post_type');
 ?>
