@@ -1,9 +1,9 @@
-.cubetech-blocks { position: relative; background-color: white; width: 100%; display: block; height: auto; border-top: 5px solid #dfe64b; overflow: auto; margin-bottom: 26px; box-shadow: 0 1px 3px rgba(0,0,0,.13); -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.13); -moz-box-shadow: 0 1px 3px rgba(0,0,0,.13); }
+.cubetech-blocks { position: relative; background-color: white; width: 100%; display: block; height: auto; border-top: 5px solid #dddb3b; overflow: auto; margin-bottom: 26px; box-shadow: 0 1px 3px rgba(0,0,0,.13); -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.13); -moz-box-shadow: 0 1px 3px rgba(0,0,0,.13); }
 .cubetech-blocks > div { float: left; display: inline-block; min-height: 100px; }
 .cubetech-blocks-image { width: 60%; position: relative; }
 .cubetech-blocks-image img { width: 100%; height: auto; }
 .cubetech-blocks-link { position: absolute; bottom: 20px; right: 20px; }
-.cubetech-blocks-link > a  { display: block; background-color: #dfe64b; font-weight: normal; font-family:"Roboto"; font-size: 15px; font-weight: 700; text-align: center; text-transform: uppercase; color: #2e3641; width: 160px; line-height: 52px;  }
+.cubetech-blocks-link > a  { display: block; background-color: #dddb3b; font-weight: normal; font-family:"Roboto"; font-size: 15px; font-weight: 700; text-align: center; text-transform: uppercase; color: #2e3641; width: 160px; line-height: 52px;  }
 .cubetech-blocks-link > a:hover { color: #2e3641; background-color: #c5c414; text-decoration: none; }
 
 .cubetech-blocks-content { width: 40%; -moz-box-sizing: border-box; box-sizing: border-box; padding: 25px; font-family: Arial, sans-serif; font-size: 13px; color: #2e3641;  }
