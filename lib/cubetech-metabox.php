@@ -51,6 +51,12 @@ $cubetech_blocks_meta_fields = array(
 		'options' => $options,
 	),
 	array(
+		'label'=> 'Verlinkung intern',
+		'desc'	=> 'Interne URL – wird vor externer Verlinkung priorisiert wenn ausgefüllt',
+		'id'	=> $prefix.'internallink',
+		'type'	=> 'text'
+	),
+	array(
 		'label'=> 'Verlinkung extern',
 		'desc'	=> 'Externe Verlinkung (mit http://) – wird vor interner Verlinkung priorisiert wenn ausgefüllt',
 		'id'	=> $prefix.'externallink',

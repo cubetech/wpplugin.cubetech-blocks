@@ -47,8 +47,10 @@ function cubetech_blocks_shortcode($atts)
 		$terms = wp_get_post_terms($post->ID, 'cubetech_blocks_group');
 		$link = '';
 		
-		if(isset($post_meta_data['cubetech_blocks_externallink'][0]) && $post_meta_data['cubetech_blocks_externallink'][0] != '')
-			$link = '<span class="cubetech-blocks-link"><a href="' . $post_meta_data['cubetech_blocks_externallink'][0] . '" target="_blank">MEHR</a></span>';
+		if(isset($post_meta_data['cubetech_blocks_internallink'][0]) && $post_meta_data['cubetech_blocks_internallink'][0] != '')
+			$link = '<span class="cubetech-blocks-link"><a href="' . $post_meta_data['cubetech_blocks_internallink'][0] . '">&raquo; MEHR</a></span>';
+		elseif(isset($post_meta_data['cubetech_blocks_externallink'][0]) && $post_meta_data['cubetech_blocks_externallink'][0] != '')
+			$link = '<span class="cubetech-blocks-link"><a href="' . $post_meta_data['cubetech_blocks_externallink'][0] . '" target="_blank">&raquo; MEHR</a></span>';
 		elseif ( $post_meta_data['cubetech_blocks_links'][0] != '' && $post_meta_data['cubetech_blocks_links'][0] != 'nope' && $post_meta_data['cubetech_blocks_links'][0] > 0 )
 			$link = '<span class="cubetech-blocks-link"><a href="' . get_permalink( $post_meta_data['cubetech_blocks_links'][0] ) . '">MEHR</a></span>';
 		
