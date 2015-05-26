@@ -48,22 +48,24 @@ function cubetech_blocks_shortcode($atts)
 		$link = '';
 		
 		if(isset($post_meta_data['cubetech_blocks_internallink'][0]) && $post_meta_data['cubetech_blocks_internallink'][0] != '')
-			$link = '<span class="cubetech-blocks-link"><a href="' . $post_meta_data['cubetech_blocks_internallink'][0] . '">&raquo; MEHR</a></span>';
+			$link = '<span class="cubetech-blocks-link"><a href="' . $post_meta_data['cubetech_blocks_internallink'][0] . '">Details</a></span>';
 		elseif(isset($post_meta_data['cubetech_blocks_externallink'][0]) && $post_meta_data['cubetech_blocks_externallink'][0] != '')
-			$link = '<span class="cubetech-blocks-link"><a href="' . $post_meta_data['cubetech_blocks_externallink'][0] . '" target="_blank">&raquo; MEHR</a></span>';
+			$link = '<span class="cubetech-blocks-link"><a href="' . $post_meta_data['cubetech_blocks_externallink'][0] . '" target="_blank">Details</a></span>';
 		elseif ( $post_meta_data['cubetech_blocks_links'][0] != '' && $post_meta_data['cubetech_blocks_links'][0] != 'nope' && $post_meta_data['cubetech_blocks_links'][0] > 0 )
-			$link = '<span class="cubetech-blocks-link"><a href="' . get_permalink( $post_meta_data['cubetech_blocks_links'][0] ) . '">MEHR</a></span>';
+			$link = '<span class="cubetech-blocks-link"><a href="' . get_permalink( $post_meta_data['cubetech_blocks_links'][0] ) . '">Details</a></span>';
 		
 		$return .= '
 		<div class="cubetech-blocks">
 			<div class="cubetech-blocks-image">
 				' . get_the_post_thumbnail( $post->ID, 'cubetech-blocks-thumb', array('class' => 'cubetech-blocks-thumb') ) . '
-				' . $link . '
 			</div>
 			<div class="cubetech-blocks-content">
-				<h2 class="cubetech-blocks-title">' . $post->post_title . '</h2>
-				<h3 class="cubetech-blocks-subtitle">' . $post_meta_data['cubetech_blocks_subtitle'][0] . '</h3>
+				<h2 class="cubetech-blocks-title">' . $post->post_title . '</h2>';
+				if(isset($post_meta_data['cubetech_blocks_subtitle'][0]) && $post_meta_data['cubetech_blocks_subtitle'][0] != '')
+					$return .= '<h3 class="cubetech-blocks-subtitle">' . $post_meta_data['cubetech_blocks_subtitle'][0] . '</h3>';
+		$return .= '
 				<div class="cubetech-blocks-content-container">' . $post->post_content . '</div>
+				' . $link . '
 			</div>
 		</div>';
 

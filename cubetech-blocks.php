@@ -13,7 +13,7 @@ include_once('lib/cubetech-shortcode.php');
 include_once('lib/cubetech-group.php');
 include_once('lib/cubetech-metabox.php');
 
-add_image_size( 'cubetech-blocks-thumb', 423, 217, true );
+add_image_size( 'cubetech-blocks-thumb', 400, 335, true );
 
 wp_enqueue_script('jquery');
 wp_register_script('cubetech_blocks_js', plugins_url('assets/js/cubetech-blocks.js', __FILE__), 'jquery');
