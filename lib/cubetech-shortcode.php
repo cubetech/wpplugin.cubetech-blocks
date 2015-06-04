@@ -39,7 +39,7 @@ function cubetech_blocks_shortcode($atts)
 	$class = '';
 	$return = '';
 	
-	$return .= '<div class="cubetech-blocks-container">';
+	$return .= '</div><div class="cubetech-blocks-container">';
 	
 	foreach ($posts as $post) {
 	
@@ -54,10 +54,11 @@ function cubetech_blocks_shortcode($atts)
 		elseif ( $post_meta_data['cubetech_blocks_links'][0] != '' && $post_meta_data['cubetech_blocks_links'][0] != 'nope' && $post_meta_data['cubetech_blocks_links'][0] > 0 )
 			$link = '<span class="cubetech-blocks-link"><a href="' . get_permalink( $post_meta_data['cubetech_blocks_links'][0] ) . '">Details</a></span>';
 		
+		$thumbnail = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+		
 		$return .= '
 		<div class="cubetech-blocks">
-			<div class="cubetech-blocks-image">
-				' . get_the_post_thumbnail( $post->ID, 'cubetech-blocks-thumb', array('class' => 'cubetech-blocks-thumb') ) . '
+			<div class="cubetech-blocks-image" style="background-image:url('.$thumbnail.')">
 			</div>
 			<div class="cubetech-blocks-content">
 				<h2 class="cubetech-blocks-title">' . $post->post_title . '</h2>';

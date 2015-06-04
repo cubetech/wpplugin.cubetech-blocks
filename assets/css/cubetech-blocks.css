@@ -1,13 +1,13 @@
 .cubetech-blocks { position: relative; background-color: white; width: 100%; display: block; height: auto; overflow: auto; margin-top: 20px; box-shadow: 0 1px 3px rgba(0,0,0,.13); -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.13); -moz-box-shadow: 0 1px 3px rgba(0,0,0,.13); }
-.cubetech-blocks > div { float: left; display: inline-block; min-height: 100px; }
+.cubetech-blocks > div { float: left; display: inline-block; min-height: 100px; overflow: hidden; background-size:cover; background-repeat: no-repeat; }
 .cubetech-blocks-image { width: 45.5%; height: 335px; position: relative; }
-.cubetech-blocks-image img { width: 100%; height: auto; }
+.cubetech-blocks-image img { width: auto; height: 100%; }
 .cubetech-blocks-link { position: absolute; bottom: 32px; }
 .cubetech-blocks-link > a  { display: block; background-color: #dddb3b; font-weight: normal; font-family:"Roboto"; font-size: 15px; font-weight: 700; text-align: center; text-transform: uppercase; color: #2e3641; width: 160px; line-height: 52px;  }
 .cubetech-blocks-link > a:hover { color: #2e3641; background-color: #c5c414; text-decoration: none; }
 
-.cubetech-blocks-content { width: 54.5%; -moz-box-sizing: border-box; box-sizing: border-box; padding: 45px 40px; font-size: 17px; color: #2e3641; font-weight: 300; }
-.cubetech-blocks-content h2 { margin-top: 0; font-size: 33px; }
+.cubetech-blocks-content { width: 54.5%; -moz-box-sizing: border-box; box-sizing: border-box; padding: 25px 40px; font-size: 17px; color: #2e3641; font-weight: 300; }
+.cubetech-blocks-content h2 {font-size: 33px; line-height: 33px;}
 
 .cubetech-blocks-content-container { margin-top: 25px; line-height: 21px; }
 
