@@ -3,7 +3,7 @@
 .cubetech-blocks-image { width: 45.5%; height: 335px; position: relative; }
 .cubetech-blocks-image img { width: auto; height: 100%; }
 .cubetech-blocks-link { position: absolute; bottom: 32px; }
-.cubetech-blocks-link > a  { display: block; background-color: #dddb3b; font-weight: normal; font-family:"Roboto"; font-size: 15px; font-weight: 700; text-align: center; text-transform: uppercase; color: #2e3641; width: 160px; line-height: 52px;  }
+.cubetech-blocks-link > a  { display: block; background-color: #d7e054; font-weight: normal; font-family:"Roboto"; font-size: 15px; font-weight: 700; text-align: center; text-transform: uppercase; color: #2e3641; width: 160px; line-height: 52px;  }
 .cubetech-blocks-link > a:hover { color: #2e3641; background-color: #c5c414; text-decoration: none; }
 
 .cubetech-blocks-content { width: 54.5%; -moz-box-sizing: border-box; box-sizing: border-box; padding: 25px 40px; font-size: 17px; color: #2e3641; font-weight: 300; }
@@ -14,8 +14,8 @@
 @media (min-width: 768px) and (max-width: 979px) {
 
 	.cubetech-blocks-content { padding: 1% 1.5%; }
-	.cubetech-blocks-content-container { margin-top: 0px; line-height: 16px; font-size: 11px; }
-	.cubetech-blocks-content h2 { font-size: 13px; }
+	.cubetech-blocks-content-container { margin-top: 0px;}
+	.cubetech-blocks-link { position: static; bottom: auto; display: block; margin-top: 18px;}
 
 }
 
@@ -23,6 +23,6 @@
 
 	.cubetech-blocks > div { width: 100%;}
 	.cubetech-blocks-image { position: relative; }
-	.cubetech-blocks-link { position: absolute; bottom: 10%; right: 5%; }
+	.cubetech-blocks-link { position: static; bottom: auto; display: block; margin-top: 18px;}
 
 }

@@ -12,6 +12,9 @@ function add_cubetech_blocks_meta_box() {
 }
 add_action('add_meta_boxes', 'add_cubetech_blocks_meta_box');
 
+// The Callback
+function show_cubetech_blocks_meta_box() {
+global $post;
 // Field Array
 $prefix = 'cubetech_blocks_';
 
@@ -63,10 +66,6 @@ $cubetech_blocks_meta_fields = array(
 		'type'	=> 'text'
 	),
 );
-
-// The Callback
-function show_cubetech_blocks_meta_box() {
-global $cubetech_blocks_meta_fields, $post;
 // Use nonce for verification
 echo '<input type="hidden" name="cubetech_blocks_meta_box_nonce" value="'.wp_create_nonce(basename(__FILE__)).'" />';
 	
