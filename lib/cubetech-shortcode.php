@@ -49,10 +49,11 @@ function cubetech_blocks_shortcode($atts)
 		
 		if(isset($post_meta_data['cubetech_blocks_internallink'][0]) && $post_meta_data['cubetech_blocks_internallink'][0] != '')
 			$link = '<span class="cubetech-blocks-link"><a href="' . $post_meta_data['cubetech_blocks_internallink'][0] . '">Details</a></span>';
-		elseif(isset($post_meta_data['cubetech_blocks_externallink'][0]) && $post_meta_data['cubetech_blocks_externallink'][0] != '')
+		elseif (isset($post_meta_data['cubetech_blocks_externallink'][0]) && $post_meta_data['cubetech_blocks_externallink'][0] != '')
 			$link = '<span class="cubetech-blocks-link"><a href="' . $post_meta_data['cubetech_blocks_externallink'][0] . '" target="_blank">Details</a></span>';
 		elseif ( $post_meta_data['cubetech_blocks_links'][0] != '' && $post_meta_data['cubetech_blocks_links'][0] != 'nope' && $post_meta_data['cubetech_blocks_links'][0] > 0 )
 			$link = '<span class="cubetech-blocks-link"><a href="' . get_permalink( $post_meta_data['cubetech_blocks_links'][0] ) . '">Details</a></span>';
+		
 		
 		$thumbnail = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 		
@@ -69,9 +70,8 @@ function cubetech_blocks_shortcode($atts)
 				' . $link . '
 			</div>
 		</div>';
-
 	}
-
+	
 	return $return . '</div>';
 
 }

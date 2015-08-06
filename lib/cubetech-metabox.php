@@ -12,6 +12,8 @@ function add_cubetech_blocks_meta_box() {
 }
 add_action('add_meta_boxes', 'add_cubetech_blocks_meta_box');
 
+$prefix = 'cubetech_blocks_';
+
 $args = array( 'posts_per_page' => -1, 'numberposts' => -1, 'post_status' => 'publish', 'post_type' => 'post', 'order' => 'ASC', 'orderby' => 'title' ); 
 $postlist = get_posts( $args );
 
