@@ -12,10 +12,6 @@ function add_cubetech_blocks_meta_box() {
 }
 add_action('add_meta_boxes', 'add_cubetech_blocks_meta_box');
 
-// The Callback
-function show_cubetech_blocks_meta_box() {
-global $post;
-// Field Array
 $prefix = 'cubetech_blocks_';
 
 $args = array( 'posts_per_page' => -1, 'numberposts' => -1, 'post_status' => 'publish', 'post_type' => 'post', 'order' => 'ASC', 'orderby' => 'title' ); 
@@ -66,6 +62,14 @@ $cubetech_blocks_meta_fields = array(
 		'type'	=> 'text'
 	),
 );
+
+// The Callback
+function show_cubetech_blocks_meta_box() {
+global $post;
+global $cubetech_blocks_meta_fields;
+// Field Array
+$prefix = 'cubetech_blocks_';
+
 // Use nonce for verification
 echo '<input type="hidden" name="cubetech_blocks_meta_box_nonce" value="'.wp_create_nonce(basename(__FILE__)).'" />';
 	
@@ -128,16 +132,18 @@ function save_cubetech_blocks_meta($post_id) {
 		} elseif (!current_user_can('edit_post', $post_id)) {
 			return $post_id;
 	}
-	
+
 	// loop through fields and save the data
 	foreach ($cubetech_blocks_meta_fields as $field) {
 		$old = get_post_meta($post_id, $field['id'], true);
 		$new = $_POST[$field['id']];
+		
 		if ($new && $new != $old) {
 			update_post_meta($post_id, $field['id'], $new);
 		} elseif ('' == $new && $old) {
 			delete_post_meta($post_id, $field['id'], $old);
 		}
 	} // end foreach
+	
 }
 add_action('save_post', 'save_cubetech_blocks_meta');  
